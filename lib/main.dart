@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 const platform = MethodChannel('nfc.payment/channel');
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(title: 'NFC Payment Demo', home: CardInputPage());
-  }
+  Widget build(BuildContext context) => MaterialApp(
+        title: 'NFC Payment Demo',
+        home: const CardInputPage(),
+      );
 }
 
 class CardInputPage extends StatefulWidget {
