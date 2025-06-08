@@ -1,16 +1,23 @@
-# nfc_payment_demo
+# NFC Payment Demo
 
-A new Flutter project.
+This project demonstrates a simple Flutter application that uses Android's Host Card Emulation (HCE) to respond to NFC payment requests. The app lets you enter dummy card details and start an NFC session through a platform channel.
 
-## Getting Started
+## Prerequisites
+- Flutter 3.7 or later
+- Android device with NFC and HCE support
 
-This project is a starting point for a Flutter application.
+## Building and Running
+1. Get dependencies:
+   ```
+   flutter pub get
+   ```
+2. Run on an Android device or emulator with NFC:
+   ```
+   flutter run
+   ```
 
-A few resources to get you started if this is your first Flutter project:
+When you tap **Start NFC Payment**, the native Android code checks for NFC availability and activates the `MyHostApduService` which replies to a simple APDU SELECT command.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## License
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This project is licensed under the [MIT License](LICENSE).
