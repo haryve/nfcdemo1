@@ -15,6 +15,10 @@ This project demonstrates a simple Flutter application that uses Android's Host 
    ```
    flutter run
    ```
+3. Execute tests:
+   ```
+   flutter test
+   ```
 
 When you tap **Start NFC Payment**, the native Android code checks for NFC availability and activates the `MyHostApduService` which replies to a simple APDU SELECT command.
 

@@ -4,14 +4,14 @@ import android.nfc.cardemulation.HostApduService;
 import android.os.Bundle;
 import android.util.Log;
 
-import java.util.Arrays;
 
 public class MyHostApduService extends HostApduService {
 
     private static final String TAG = "MyHostApduService";
 
-    // A simple SELECT APDU command for demo (replace this with your AID in apduservice.xml)
-    private static final String SELECT_APDU_HEADER = "00A40400";
+    // A simple SELECT APDU command for demo.
+    // Keep AID in sync with res/apduservice.xml (aid-filter="F222222222").
+    private static final String SELECT_APDU_HEADER = "00A40400F222222222";
 
     @Override
     public byte[] processCommandApdu(byte[] apdu, Bundle extras) {
